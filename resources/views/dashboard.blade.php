@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Dashboard || {{ auth()->user()->name }}">
     <!-- Overview -->
     <div>
         <h2 class="mb-2 text-3xl font-semibold">Overview</h2>

@@ -1,3 +1,9 @@
+@php
+    $appName = config('app.name', 'laravel');
+@endphp
+
+@props(['title' => $appName])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="ltr">
 
@@ -5,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>{{ $title }}</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
