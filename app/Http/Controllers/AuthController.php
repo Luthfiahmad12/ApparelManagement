@@ -21,6 +21,7 @@ class AuthController extends Controller
 
     public function postLogin(LoginRequest $request)
     {
+        // dd($request->all());
         $request->authenticate();
 
         $request->session()->regenerate();

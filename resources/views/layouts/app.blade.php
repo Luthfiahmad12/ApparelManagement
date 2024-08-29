@@ -10,10 +10,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ $title }}</title>
 
+    <x-head.tinymce-config />
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    @stack('styles')
 
 </head>
 
@@ -32,8 +37,8 @@
             <!-- END Page Header -->
 
             <!-- Page Content -->
-            <main id="page-content" class="flex max-w-full flex-auto flex-col pt-16">
-                <div class="container mx-auto space-y-10 px-4 py-8 lg:space-y-16 lg:px-8 lg:py-12 xl:max-w-7xl">
+            <main id="page-content" class="flex flex-col flex-auto max-w-full pt-16">
+                <div class="container px-4 py-8 mx-auto space-y-10 lg:space-y-16 lg:px-8 lg:py-12 xl:max-w-7xl">
 
                     {{ $slot }}
 
@@ -47,6 +52,8 @@
         </div>
         <!-- END Page Container -->
     </div>
+
+    @stack('scripts')
 </body>
 
 </html>

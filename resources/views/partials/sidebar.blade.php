@@ -70,66 +70,25 @@
                     </x-slot>
                     <span class="grow py-2">Dashboard</span>
                 </x-nav-link>
-                <a href="javascript:void(0)"
-                    class="group flex items-center gap-2 px-5 py-0.5 text-sm font-medium text-gray-700 hover:bg-rose-50 hover:text-rose-900 active:bg-gray-50 dark:text-gray-200 dark:hover:bg-rose-800 dark:hover:text-rose-200">
-                    <span class="flex flex-none items-center opacity-75">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor"
-                            class="hi-outline hi-clipboard-list inline-block h-6 w-6 text-gray-400 group-hover:text-rose-600 dark:group-hover:text-rose-300">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                        </svg>
-                    </span>
-                    <span class="grow py-2">Subscriptions</span>
-                </a>
 
                 <div class="px-5 pb-2 pt-6 text-xs font-medium uppercase tracking-wider text-gray-400">
                     management
                 </div>
-                <a href="javascript:void(0)"
-                    class="group flex items-center gap-2 px-5 py-0.5 text-sm font-medium text-gray-700 hover:bg-rose-50 hover:text-rose-900 active:bg-gray-50 dark:text-gray-200 dark:hover:bg-rose-800 dark:hover:text-rose-200">
-                    <span class="flex flex-none items-center opacity-75">
+                <x-nav-link href="{{ route('products.index') }}" :active="request()->routeIs('products.*')">
+                    <x-slot name="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-6 inline-block text-gray-400 group-hover:text-rose-600 dark:group-hover:text-rose-300">
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 0 0-1.883 2.542l.857 6a2.25 2.25 0 0 0 2.227 1.932H19.05a2.25 2.25 0 0 0 2.227-1.932l.857-6a2.25 2.25 0 0 0-1.883-2.542m-16.5 0V6A2.25 2.25 0 0 1 6 3.75h3.879a1.5 1.5 0 0 1 1.06.44l2.122 2.12a1.5 1.5 0 0 0 1.06.44H18A2.25 2.25 0 0 1 20.25 9v.776" />
                         </svg>
-
-                    </span>
+                    </x-slot>
                     <span class="grow py-2">Products</span>
-                </a>
+                </x-nav-link>
                 <a href="javascript:void(0)"
                     class="group flex items-center gap-2 px-5 py-0.5 text-sm font-medium text-gray-700 hover:bg-rose-50 hover:text-rose-900 active:bg-gray-50 dark:text-gray-200 dark:hover:bg-rose-800 dark:hover:text-rose-200">
                     <span class="flex flex-none items-center opacity-75">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor"
-                            class="size-6 inline-block text-gray-400 group-hover:text-rose-600 dark:group-hover:text-rose-300">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 0 0-1.883 2.542l.857 6a2.25 2.25 0 0 0 2.227 1.932H19.05a2.25 2.25 0 0 0 2.227-1.932l.857-6a2.25 2.25 0 0 0-1.883-2.542m-16.5 0V6A2.25 2.25 0 0 1 6 3.75h3.879a1.5 1.5 0 0 1 1.06.44l2.122 2.12a1.5 1.5 0 0 0 1.06.44H18A2.25 2.25 0 0 1 20.25 9v.776" />
-                        </svg>
-
-                    </span>
-                    <span class="grow py-2">Fiturs</span>
-                </a>
-                <a href="javascript:void(0)"
-                    class="group flex items-center gap-2 px-5 py-0.5 text-sm font-medium text-gray-700 hover:bg-rose-50 hover:text-rose-900 active:bg-gray-50 dark:text-gray-200 dark:hover:bg-rose-800 dark:hover:text-rose-200">
-                    <span class="flex flex-none items-center opacity-75">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-6 inline-block text-gray-400 group-hover:text-rose-600 dark:group-hover:text-rose-300"">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
-
-                    </span>
-                    <span class="grow py-2">Orders</span>
-                </a>
-                <a href="javascript:void(0)"
-                    class="group flex items-center gap-2 px-5 py-0.5 text-sm font-medium text-gray-700 hover:bg-rose-50 hover:text-rose-900 active:bg-gray-50 dark:text-gray-200 dark:hover:bg-rose-800 dark:hover:text-rose-200">
-                    <span class="flex flex-none items-center opacity-75">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentColor"
                             class="hi-outline hi-heart inline-block h-6 w-6 text-gray-400 group-hover:text-rose-600 dark:group-hover:text-rose-300">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
