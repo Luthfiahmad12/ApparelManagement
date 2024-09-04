@@ -32,9 +32,9 @@ class MaterialController extends Controller
      */
     public function store(StoreBahanRequest $request)
     {
-        $data = $request->validated();
+        $validatedData = $request->validated();
 
-        Material::create($data);
+        Material::create($validatedData);
 
         return to_route('materials.index')->with('success', 'Berhasil Tambah Data');
     }
@@ -60,9 +60,9 @@ class MaterialController extends Controller
      */
     public function update(UpdateBahanRequest $request, Material $material)
     {
-        $data = $request->validated();
+        $validatedData = $request->validated();
 
-        $material->update($data);
+        $material->update($validatedData);
 
         return to_route('materials.index')->with('success', 'Berhasil Update Data');
     }
@@ -73,6 +73,7 @@ class MaterialController extends Controller
     public function destroy(Material $material)
     {
         $material->delete();
+
         return back()->with('success', 'Data Berhasil Dihapus');
     }
 }
