@@ -121,7 +121,6 @@
                         </x-primary-button>
                     </form>
                 </div>
-
             </x-modal>
 
             <x-modal id="detailModal">
